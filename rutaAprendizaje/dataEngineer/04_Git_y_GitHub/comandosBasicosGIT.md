@@ -1,4 +1,3 @@
-<!-- ejemplo markdown -->
 # GIT
 
 - El comando git show nos muestra los cambios que han existido sobre un archivo y es muy útil para detectar cuándo se produjeron ciertos cambios, qué se rompió y cómo lo podemos solucionar
