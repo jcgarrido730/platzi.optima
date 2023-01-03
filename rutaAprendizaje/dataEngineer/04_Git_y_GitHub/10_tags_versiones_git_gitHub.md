@@ -1,0 +1,59 @@
+# Versiones - Etiquetas - Tags
+## Comandos para trabajar con etiquetas
+### Listar los tags de nuestro repositorio local
+```
+$ git tag 
+$ git show-ref --tags
+```
+
+### Crear un nuevo tag y asignarlo a un commit
+```
+$ git tag -a nombre_tag -m "descripción del tag" id-del-commit
+```
+
+### Publicar un tag en el repositorio remoto
+```
+$ git pull origin main
+$ git push origin --tags
+```
+
+### Borrar un tag en el repositorio local
+```
+$ git tag -d nombre_tag
+$ git pull origin main
+$ git push origin --tags
+$ git tag 
+```
+
+### Borrar un tag del repositorio remoto:
+```
+$ git tag -d nombre_tag 
+$ git push origin :refs/tags/nombre_tag
+```
+
+# Visualización "gráfica" de los branch y commits realizados
+```
+$ git log --all --graph --decorate --oneline
+```
+
+# Crear alias para instrucciones largas o complejas de recordar
+### Para un proyecto
+```
+$ git config alias.nombre_alias "log --all --graph --decorate --oneline"
+```
+### Global
+```
+$ git config --global alias.nombre_alias "log --all --graph --decorate --oneline"
+```
+
+### Ejecutar el alias
+```
+$ nombre_alias
+```
+
+### Historial de los branch y vista gráfica que ofrece git
+```
+$ git show-branch
+$ git show-branch --all 
+$ gitk
+```
