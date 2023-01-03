@@ -2,48 +2,48 @@
 
 
 ### Configuraciones de git:
-```git
+```
 $ git config
 $ git config --list
 ```
 
 ### Configuración inicial git:
-```git
+```
 $ git config --global user.name "Juan Carlos Garrido Sarasa"
 $ git config --global user.email jcgarrido@gmail.com
 $ git config --global init.defaultBranch main
 ```
 
 ### Si por algún motivo te equivocaste en el nombre o email que configuraste al principio, lo puedes modificar de la siguiente manera:
-```git
+```
 $ git config --global --replace-all user.name "Aquí va tu nombre modificado"
 ```
 
 ### O si lo deseas eliminar y añadir uno nuevo
-```git
+```
 $ git config --global --unset-all user.name
 $ git config --global --add user.name "Aquí va tu nombre"
 ```
 
 ### Configuraciones guardadas de git
-```git
+```
 $ git config --list --show-origin
 ```
 
 ### Inicializar y conectar con repositorio remoto:
-```git
+```
 $ git init
 $ git remote -v
 $ git remote add origin git@github.com:jcgarrido730/nombre.repositorio.git
 ```
 
 ### Validar a que repositorio estoy conectado
-```git
+```
 $ git remote -v
 ```
 
 ### Descargar cambios del repositorio remoto
-```git
+```
 $ git status
 $ git pull origin main
 $ git status
@@ -52,7 +52,7 @@ $ git status
 _Realizar los cambios en directorios o archivos_
 
 ### Agregar y subir cambios al repositorio remoto
-```git
+```
 $ git status
 $ git add .
 $ git status
@@ -65,7 +65,7 @@ $ git status
 _Realizar los cambios en directorios o archivos_
 
 ### Agregar y subir mas cambios al repositorio remoto
-```git
+```
 $ git status
 $ git add .
 $ git status
