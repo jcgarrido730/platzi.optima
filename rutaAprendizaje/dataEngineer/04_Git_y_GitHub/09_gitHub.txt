@@ -7,3 +7,8 @@ git remote -v
 # git remote add origin git@github.com:jcgarrido730/nombre.repositorio.git
 git push origin nombre_rama
 git status
+
+Para descargar los cambios de un repositorio remoto:
+# asegurarse estar ubicados en el repositorio en donde queremos descargar los cambios
+git status 
+$ git pull origin nombre_rama

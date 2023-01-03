@@ -20,14 +20,14 @@ En otros casos, si encuentras un bug o error de código en la rama Main (que afe
 Todos los commits se aplican sobre una rama. Por defecto, siempre empezamos en la rama Main (pero puedes cambiarle el nombre si no te gusta) y generamos nuevas ramas, a partir de esta, para crear flujos de trabajo independientes.
 Cómo crear un branch o rama en Git
 
-El comando git branch permite crear una rama nueva. Si quieres empezar a trabajar en una nueva función, puedes crear una rama nueva a partir de la rama master con git branch new_branch. Una vez creada, puedes usar git checkout new_branch para cambiar a esa rama.
+El comando git branch permite crear una rama nueva. Si quieres empezar a trabajar en una nueva función, puedes crear una rama nueva a partir de la rama main con git branch new_branch. Una vez creada, puedes usar git checkout new_branch para cambiar a esa rama.
 
-Recuerda que todas tus versiones salen de la rama principal o Master y de allí puedes tomar una versión específica para crear otra rama de versiones.
+Recuerda que todas tus versiones salen de la rama principal o main y de allí puedes tomar una versión específica para crear otra rama de versiones.
 Cómo hacer merge
 
 Producir una nueva rama se conoce como Checkout. Unir dos ramas lo conocemos como Merge.
 
-Cuando haces merge de estas ramas con el código principal, su código se fusiona originando una nueva versión de la rama master (o main) que ya tiene todos los cambios que aplicaste en tus experimentos o arreglos de errores.
+Cuando haces merge de estas ramas con el código principal, su código se fusiona originando una nueva versión de la rama main que ya tiene todos los cambios que aplicaste en tus experimentos o arreglos de errores.
 
 Podemos generar todas las ramas y commits que queramos. De hecho, podemos aprovechar el registro de cambios de Git para producir ramas, traer versiones viejas del código, arreglarlas y combinarlas de nuevo para mejorar el proyecto.
 

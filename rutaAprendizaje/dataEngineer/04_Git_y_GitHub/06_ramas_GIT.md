@@ -4,9 +4,27 @@ Las ramas (branches) son la forma de hacer cambios en nuestro proyecto sin afect
 La cabecera o HEAD representan la rama y el commit de esa rama donde estamos trabajando. 
 Por defecto, esta cabecera aparecerá en el último commit de nuestra rama principal. Pero podemos cambiarlo al crear una rama (```git branch rama```, ```git checkout -b rama```) o movernos en el tiempo a cualquier otro commit de cualquier otra rama con los comandos (```git reset id-commit```, ```git checkout rama-o-id-commit```).
 
+### Lista de branch
+```
+$ git branch 
+  *main
+```
+
+### Referencia a la última confirmación de la rama actual
+```
+$ git show 
+ (HEAD -> main, origin/main)
+```
+
 ### Generar una nueva rama
 ```
 $ git branch nombre_rama
+$ git branch 
+  *main
+   nombre_rama
+   
+$ git show 
+ (HEAD -> main, origin/main, nombre_rama)
 ```
 
 ### Saltar de una rama a otra
@@ -27,4 +45,25 @@ $ git reset id-commit
 ### Regresar a un commit en específico, sin importar la rama. No elimina los commit posteriores al id seleccionado
 ```
 $ git checkout rama-o-id-commit
+```
+
+### Borrar un branch LOCAL
+```
+$ git status 
+$ git checkout main
+
+git branch -d nombre_rama_borrar
+```
+
+### Borrar un branch REMOTO
+```
+$ git status 
+$ git push origin --delete nombre_rama_borrar
+# o también 
+$ git push origin :nombre_rama_borrar
+```
+
+### Sincronizar la lista de branchs
+```
+$ git fetch -p 
 ```

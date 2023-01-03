@@ -1,7 +1,7 @@
 # Ramas en GitHub
 ### Crear una rama
 ```
-$ git branch branchName
+$ git branch nombre_rama
 ```
 
 ### Movernos a otra rama
@@ -15,7 +15,27 @@ $ git branch nombre_rama
 $ git checkout -b nombre_rama
 ```
 
+### Descargar los archivos de la última versión de la rama principal y todo el historial de cambios en la carpeta .git
+```
+$ git clone url_del_servidor_remoto
+```
+
 ### Publicar una rama local al repositorio remoto
 ```
 $ git push origin nombre_rama
+```
+
+### Obtener actualizaciones del servidor remoto y guardarlas en nuestro repositorio local
+```
+$ git fetch
+```
+
+### Combinar los últimos cambios del servidor remoto y nuestro directorio de trabajo
+```
+$ git merge
+```
+
+### ```git fetch``` y ```git merge``` al mismo tiempo
+```
+$ git pull
 ```
