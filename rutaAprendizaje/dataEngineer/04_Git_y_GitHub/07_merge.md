@@ -15,6 +15,10 @@ $ git checkout main
 
 # Estando en main subo los cambios que tiene nombre_rama
 $ git merge nombre_rama
-# colocar un comentario del merge
+# automáticamente se abre un editor externo, se debe de colocar un comentario del merge y cerrar el editor.
 $ git status 
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+$ git push
 ```
