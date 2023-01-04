@@ -1,0 +1,9 @@
+.gitignore
+
+https://git-scm.com/docs/gitignore
+
+Las razones principales para tomar la decisión de no agregar un archivo a un repositorio son:
+
+    Es un archivo con contraseñas (normalmente con la extensión .env)
+    Es un blob (binary large object, objeto binario grande), mismos que son difíciles de gestionar en git.
+    Son archivos que se generan corriendo comandos, por ejemplo la carpeta node_modules, que genera npm al correr el comando npm install
