@@ -1,24 +1,30 @@
-git rebase
+# git rebase
 
 Rebase es el proceso de mover o combinar una secuencia de confirmaciones en una nueva confirmación base. La reorganización es muy útil y se visualiza fácilmente en el contexto de un flujo de trabajo de ramas de funciones. 
 
 Para hacer un rebase en la rama feature de la rama main, correrías los siguientes comandos:
 
-    $ git checkout feature
-    $ git rebase main
+```
+$ git checkout feature
+$ git rebase main
+```
 
 Esto trasplanta la rama feature desde su locación actual hacia la punta de la rama main
 
 Ahora, falta fusionar la rama feature con la rama main
-    $ git checkout main
-    $ git rebase feature
-    # No reorganices el historial público
+```
+$ git checkout main
+$ git rebase feature
+# No reorganices el historial público
+```
 
 Nunca debes reorganizar las confirmaciones una vez que se hayan enviado a un repositorio público. La reorganización sustituiría las confirmaciones antiguas por las nuevas y parecería que esa parte del historial de tu proyecto se hubiera desvanecido de repente.
 
-El comando rebase es una mala práctica, sobre todo en repositorios remotos. Se debe evitar su uso, pero para efectos de práctica te lo vamos a mostrar, para que hagas tus propios experimentos. Con rebase puedes recoger todos los cambios confirmados en una rama y ponerlos sobre otra.
+El comando rebase es __una mala práctica__, sobre todo en repositorios remotos. Se debe evitar su uso, pero para efectos de práctica te lo vamos a mostrar, para que hagas tus propios experimentos. Con rebase puedes recoger todos los cambios confirmados en una rama y ponerlos sobre otra.
 
-    # Cambiamos a la rama que queremos traer los cambios
-    $ git checkout experiment
-    # Aplicamos rebase para traer los cambios de la rama que queremos 
-    $ git rebase main
+```
+# Cambiamos a la rama que queremos traer los cambios
+$ git checkout experiment
+# Aplicamos rebase para traer los cambios de la rama que queremos 
+$ git rebase main
+```
