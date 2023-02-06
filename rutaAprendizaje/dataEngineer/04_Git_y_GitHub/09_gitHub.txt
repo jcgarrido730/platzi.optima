@@ -14,7 +14,7 @@ $ ssh-keygen -t rsa -b 4096 -C "jcgarrido@gmail.com"
 
 # Validar que este funcionando el agente ssh y agregar llave privada al sistema (Linux / Windows)
 $ eval $(ssh-agent -s)
-$ sh-add ~/.ssh/id_rsa
+$ ssh-add ~/.ssh/id_rsa
 
 # copiar el contenido del archivo $ruta/del_sistema/.ss/id_rsa_pub y pegarlo en GitHub
 
