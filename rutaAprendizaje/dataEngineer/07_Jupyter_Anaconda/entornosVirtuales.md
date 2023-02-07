@@ -108,11 +108,11 @@ Formas de especificar un número de versión de paquete para usar con los comand
 
 
 | Tipo de restricción | Especificación | Resultado |
-| --------------------|:--------------:|----------:|
+| --------------------|----------------|-----------|
 | Fuzzy | numpy=1.11 | 1.11.0, 1.11.1, 1.11.2, 1.11.18 etc. |
 | Exact | numpy==1.11 | 1.11.0 |
 | Greater than or equal to | "numpy>=1.11" | 1.11.0 or higher |
-| OR | "numpy=1.11.1|1.11.3" | 1.11.1, 1.11.3 |
+| OR | "numpy=1.11.1\\|1.11.3" | 1.11.1, 1.11.3 |
 | AND | "numpy>=1.8,<2" | 1.8, 1.9, not 2.0 |
 
  
