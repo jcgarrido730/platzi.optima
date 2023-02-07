@@ -1,0 +1,30 @@
+# Conda vs. Pip vs. Venv: ¿cuál es la diferencia?
+ 
+* pip es un administrador de paquetes para Python
+* venv es un administrador de entorno para Python
+* conda es un administrador de paquetes y de entorno y es independiente del idioma
+* venv crea entornos sandbox solo para el desarrollo de Python y  conda puede crear entornos sandbox para cualquier lenguaje de programación compatible
+* pip solo instala paquetes de Python desde PyPI 
+---
+ 
+* Conda puede instalar paquetes (escritos en cualquier idioma) de repositorios como Anaconda Repository y Anaconda Cloud
+ 
+* Conda puede instalar paquetes de PyPI usando pip en el entorno activo de Conda
+ 
+* Anaconda es una distribución de Python y R. Proporciona todo lo que necesita para resolver problemas de procesamiento y análisis de datos (con la aplicabilidad de Python)
+ 
+* Anaconda es una colección de sistemas binarios que incluye Scipy, Numpy, Pandas y sus dependencias
+---
+ 
+* Scipy es un paquete de análisis estadístico
+* Numpy es un paquete de cálculo numérico
+* Pandas es una capa de abstracción de datos para combinar y transformar datos
+---
+ 
+* JupyterLab es un entorno de desarrollo interactivo para trabajar con cuadernos, código y datos
+* Jupyter Notebok es una práctica herramienta para crear hermosos informes analíticos, le permite almacenar código, imágenes, comentarios, fórmulas y gráficos juntos. El trabajo se realiza en un navegador
+* Spyder es un IDE interactivo para computación científica en Python. Este IDE le permite escribir, editar y probar su código. Spyder ofrece visualización y edición de variables basada en GUI, introspección de código dinámico, detección de errores sobre la marcha y más. También puede integrar Anaconda con otros IDE de Python, incluidos PyCharm y Atom, según sea necesario
+* VS Code  es un editor de código optimizado con soporte para operaciones de desarrollo como depuración, lanzamiento de tareas y control de versiones
+* Glueviz  : se utiliza para visualizar datos multidimensionales en archivos. Explora las relaciones dentro y entre conjuntos de datos relacionados
+* Orange 3  es un marco de minería de datos basado en componentes. Se puede utilizar para visualización y análisis de datos. Los flujos de trabajo en Orange 3 son altamente interactivos y proporcionan un amplio conjunto de herramientas
+* RStudio es un conjunto de herramientas integradas diseñadas para ayudarlo a ser más productivo con R. Incluye los conceptos básicos de R y Notebooks

@@ -1,0 +1,127 @@
+# Creando ambientes virtuales en Anaconda
+Para crear nuestro ambientes virtuales ejecutamos en nuestro cmd:
+```
+$ conda create --name nombreenv 
+```
+ 
+Sustituimos ```nombreenv``` por el nombre que queramos darle y cuando pregunte “proceed ([y]/n)?” marcar la “y” (yes) con eso ya tendremos creado nuestro ambiente virtual. Para verificarlo podemos hacerlo desde 2 formas.
+ 
+Nos vamos a la siguiente ruta:
+```
+C:\Users\*usuario*\.conda
+```
+Abrimos el archivo ```environments.txt``` y vemos los ambiertes virtuales que tenemos.
+ 
+Si queremos crear un entorno con una versión específica de Python hacemos:
+```
+$ conda create -n nombreenv python=3.4
+```
+ 
+Para activar el entorno virtual e intalar librerias:
+```
+$ conda activate nombreenv
+```
+ 
+Para desactivarlo:
+```
+$ conda deactivate
+```
+ 
+Para ver todos los entornos que tenemos podemos teclear
+```
+$ conda env list
+```
+ 
+Para instalar paquetes dentro de nuestro entorno virtual podemos hacerlo mediante pip o con el instalador de anaconda.
+```
+$ pip install nombredelpaquete
+```
+ 
+o bien
+```
+$ conda install nombredelpaquete
+```
+ 
+De igual manera podemos ver los paquetes y la versión que tiene instalado nuestro entorno
+```
+$ conda list -n nombreenv
+```
+ 
+## Ejecutar spyder desde tu entorno
+Si quieres ejecutar ``` spyder ``` desde tu entorno virtual tan solo escribe ``` spyder ``` (asegurate de estar dentro de tu entorno virtual).
+ 
+---
+https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf
+## Conceptos básicos de Conda
+* Verificar que conda esta instalado, verificar el número de versión: ``` conda info ``` 
+* Actualizar conda a la versión actual: ``` conda update conda ``` 
+* Instalar un paquete incluido en Anaconda: ``` conda install nombredelpaquete ``` 
+* Ejecutar un paquete después de la instalación, por ejemplo Spyder*: ``` spyder ``` 
+* Actualizar cualquier programa instalado: ``` conda update nombredelpaquete ```
+* Ayuda de la línea de comandos: ``` COMMANDNAME --help ```
+* Ayuda de la línea de comandos: ``` conda install --help ```
+ 
+*Debe estar instalado y tener un comando desplegable, generalmente ``` nombredelpaquete ```
+ 
+## Uso de entornos
+* Crear un nuevo entorno llamado py35, instalar Python 3.5 y pandas 1.2: ``` conda create --name py35 python=3.5 pandas=1.2 ```
+* Crear ambiente mediante archivo: ``` conda env create --file environment.yml ```
+* Activar el nuevo entorno para usarlo: ``` WINDOWS: activate py35; LINUX, macOS: source activate py35 ``` 
+* Obtener una lista de todos los entornos, el entorno activo se muestra con *: ``` conda env list ``` 
+* Hacer una copia exacta de un entorno: ``` conda create --clone py35 --name py35-2 ``` 
+* Listar paquete instalado: ``` conda list nombredelpaquete ``` 
+* Listar todos los paquetes y versiones instalados en el entorno activo: ``` conda list ``` 
+* Listar el historial de cada cambio en el entorno actual: ``` conda list --revision ``` 
+* Restaurar entorno a una revisión anterior: ``` conda install --revision 2 ``` 
+* Guardar entorno en un archivo de texto: ``` conda list --explicit > bio-env.txt ``` 
+* Eliminar un entorno y todo lo que contiene: ``` conda env remove --name bio-env ``` 
+* Desactivar el entorno actual: WINDOWS: ``` deactivate; macOS, LINUX: source deactivate ``` 
+* Crear entorno a partir de un archivo de texto: ``` conda env create --file bio-env.txt ``` 
+* Comandos de pila: cree un nuevo entorno, asígnele el nombre bio-env e instale el paquete biopython: ``` conda create --name bio-env biopython ``` 
+ 
+## Encontrar paquetes conda
+* Use conda para buscar un paquete: ``` conda search nombredelpaquete ``` 
+* Ver la lista de todos los paquetes en Anaconda: https://docs.anaconda.com/anaconda/packages/pkg-docs
+
+## Instalación y actualización de paquetes
+* Instalar un nuevo paquete (Jupyter Notebook) en el entorno activo: ``` conda install jupyter ``` 
+* Ejecutar un paquete instalado (Jupyter Notebook): ``` jupyter-notebook ``` 
+* Instalar un nuevo paquete (toolz) en un entorno diferente (bio-env): ``` conda install --name bio-env toolz ``` 
+* Actualizar un paquete en el entorno actual: ``` conda update scikit-learn ``` 
+* Instalar un paquete (boltons) desde un canal específico (conda-forge): ``` conda install --channel conda-forge boltons ``` 
+* Instalar un paquete directamente desde PyPI en el entorno activo actual usando pip: ``` pip install boltons ``` 
+* Eliminar uno o más paquetes (toolz, boltons) de un entorno específico (bio-env): ``` conda --name bio-env toolz boltons ``` 
+* Exportar un ambiente con todas las dependencias o extras que se instalaron para que funcione el ambiente: ``` conda env export --file environment.yml```
+* Exportar un ambiente solamente con las versiones de los paquetes: ``` conda env export --no-builds --file environment.yml ```
+* Exportar dependencias que se especificaron manualmente: ``` conda env export --from-history --file environment.yml ```
+ 
+## Administrar múltiples versiones de Python
+* Instalar una versión diferente de Python en un nuevo entorno llamado py34: ``` conda create --name py34 python=3.4 ``` 
+* Cambiar al nuevo entorno que tiene una versión diferente de Python: ``` Windows: activate py34; Linux, macOS: source activate py34 ``` 
+* Muestra las ubicaciones de todas las versiones de Python que se encuentran actualmente en la ruta. 
+
+NOTA: * Se ejecutará la primera versión de Python de la lista: ``` Windows: where python; * Linux, macOS: where -a python ``` 
+* Mostrar información de versión para Python activo actual: ``` python --version ``` 
+ 
+## Especificación de números de versión
+Formas de especificar un número de versión de paquete para usar con los comandos conda create o conda install y en archivos meta.yaml
+
+
+| Tipo de restricción | Especificación | Resultado |
+| --------------------|----------------|-----------|
+| Fuzzy | numpy=1.11 | 1.11.0, 1.11.1, 1.11.2, 1.11.18 etc. |
+| Exact | numpy==1.11 | 1.11.0 |
+| Greater than or equal to | "numpy>=1.11" | 1.11.0 or higher |
+| OR | "numpy=1.11.1\\|1.11.3" | 1.11.1, 1.11.3 |
+| AND | "numpy>=1.8,<2" | 1.8, 1.9, not 2.0 |
+
+ 
+NOTA: Se deben usar comillas cuando su especificación contiene un espacio o cualquiera de estos caracteres: > < | *
+
+ Para chequear en que entorno virtual estas dentro de un editor ejecuta:
+```
+$ import sys
+$ print(sys.prefix)
+```
+ 
+Desde ese print saldrá la ruta del entorno virtual con la que podrás ver en cual de tus entornos virtuales estas.
