@@ -1,7 +1,7 @@
 # Mamba
 https://mamba.readthedocs.io/en/latest/
 
-## Instalar MANBA
+## Instalar MAMBA
 ```
 $ conda install --channel conda-forge mamba
 $ mamba --help

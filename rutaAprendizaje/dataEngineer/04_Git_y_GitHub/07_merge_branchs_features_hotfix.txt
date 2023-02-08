@@ -1,0 +1,27 @@
+Branch feature y hotfix 
+
+Partiendo del hecho que se tiene un repositorio con un branch main...
+
+Ejemplo de flujo de branch feature:
+# Se recomienda realizar un pull request (GitHub) en vez de hacer merge directamente con main o ramas principales.
+
+$ git checkout main
+$ git checkout -b develop
+$ git checkout -b feature_branch
+# realizar los ajustes y commits en feature_branch
+$ git checkout develop
+$ git merge feature_branch
+$ git checkout main
+$ git merge develop
+$ git branch -d feature_branch
+
+Ejemplo de branch hotfix:
+# Se recomienda realizar un pull request (GitHub) en vez de hacer merge directamente con main o ramas principales.
+$ git checkout main
+$ git checkout -b hotfix_branch
+# realizar los ajustes y commits en hotfix_branch
+$ git checkout develop
+$ git merge hotfix_branch
+$ git checkout main
+$ git merge hotfix_branch
+$ git branch -d hotfix_branch
