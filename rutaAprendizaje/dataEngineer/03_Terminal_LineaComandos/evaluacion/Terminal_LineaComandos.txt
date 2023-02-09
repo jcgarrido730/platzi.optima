@@ -1,0 +1,62 @@
+Curso de Introducción a la Terminal y Línea de Comandos
+
+1. La shell o línea de comandos es:
+Un programa que nos ayuda a comunicarnos con nuestro sistema operativo.
+
+2. Para crear un archivo usamos el comando:
+touch mi_archivo
+
+3. ¿Con cuál comando copiamos un directorio y su contenido? (Esto hace parte de uno de los retos que te dejé)
+cp -r mi_directorio ruta_destino
+
+4. ¿Qué comando muestra las últimas 5 líneas de texto de un documento?
+tail -n 5 mi_texto
+
+5. Para leer el manual de usuario de un comando usamos:
+man
+
+6. Las wildcards son caracteres que nos permiten definir patrones avanzados de búsqueda en la línea de comandos, esto es:
+Verdadero
+
+7. Si queremos listar todos los archivos que sean extensión txt podemos usar el comando:
+ls *.txt
+
+8. ¿Qué operador nos ayuda a concatenar la salida de un comando a un archivo de texto?
+>>
+
+9. El pipe operator redirecciona la salida de un comando a la entrada de otro comando, esto es:
+Verdadero
+
+10. Si queremos explorar las primeras 100 líneas de un documento de texto lo podemos hacer con:
+head -n 100 mi_texto | less
+
+11. Si queremos correr una serie de comandos de manera asíncrona lo hacemos con el operador:
+&
+
+12. Si deseamos condicionar la ejecución de un comando solo si uno anterior se ejecuto de manera exitosa podemos usar:
+&&
+
+13. El comando chmod u=rwx,go=r mi_archivo ¿qué permisos otorga?
+Otorga permisos de lectura, escritura y ejecución al usuario. Solo otorga permiso de lectura a los grupos y a otros.
+
+14. Es una mala práctica de seguridad asignar la siguiente configuración de permisos en modo octal a cualquier archivo o directorio.
+777
+
+15. Con el siguiente comando podemos ver la ruta del directorio Home de nuestro usuario:
+echo $HOME
+
+16. Es un comando que nos ayuda a buscar la ruta de binarios o ejecutables en nuestro sistema.
+which
+
+17. Para buscar todas las imágenes png dentro de nuestra computadora podemos ejecutar:
+*find *.png
+respuesta mala
+
+18. Para usar grep sin distinción de mayúsculas o minúsculas usamos:
+-i
+
+19. ¿Qué comando nos ayuda consultar la disponibilidad de un equipo en una red?
+ping
+
+20. ¿Qué comando muestra los procesos que consumen más recursos en nuestro sistema?
+top

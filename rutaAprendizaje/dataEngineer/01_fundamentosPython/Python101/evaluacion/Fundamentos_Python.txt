@@ -1,0 +1,95 @@
+Curso de Fundamentos de Python
+
+1. ¿Qué se obtiene en la consola al ejecutar un programa con lo siguiente?
+print('¡Felicidades por aprender Python!')
+¡Felicidades por aprender Python!
+
+2. ¿Qué es una variable en programación?
+Un espacio en memoria al que se le da un nombre para guardar algún dato.
+
+3. ¿Para qué sirve type() en Python?
+Indica el tipo de dato de una variable u objeto.
+
+4. ¿Qué obtenemos al utilizar el operador + en strings? Por ejemplo:
+'Hola,' + " " + 'Platzinauta'
+Se concatena las cadenas de texto.
+
+5. ¿Cuál es el tipo de dato float?
+Es el tipo de dato con el se representan números decimales. Por ejemplo, 5.34.
+
+6. ¿Cuál es el tipo de dato int?
+Tipo de dato con el que se representan números enteros. Por ejemplo, 19.
+
+7. ¿Qué se obtiene al ejecutar la siguiente conversión en Python?
+int(4.56)
+4
+
+8. ¿Qué se obtiene al ejecutar la siguiente línea en Python?
+print((8 / 2) + 4 * 8)
+Considera el orden en que se ejecutan los operadores aritméticos.
+36
+
+9. ¿Para qué sirven los operadores aritméticos en Python?
+Para ejecutar operaciones matemáticas fundamentales como suma, resta, multiplicación y división.
+
+10. ¿Cuál es el resultado de la siguiente comparación en Python?
+8000 > 3330
+True
+
+11. ¿Qué resultaría de la siguiente expresión lógica en Python?
+True and False
+False
+
+12. ¿Qué resultaría de la siguiente expresión lógica en Python?
+False or True 
+True
+
+13. ¿Para qué se usa el operador not en Python?
+Para negar un valor booleano dentro del programa.
+
+14. ¿Cuál es el resultado de la siguiente condicional en Python?
+result = 990
+if result >= 1000:
+	print("El resutado es mayor o igual a 1000")
+else:
+	print("El resultado es menor a 1000")
+El resultado es menor a 1000
+
+15. ¿Qué se obtiene al ejecutar el siguiente código con el método replace() en strings en Python?
+name = 'Mario Salvador'
+name = name.replace('Mario', 'Juan')
+Juan Salvador
+
+16. ¿Qué se obtiene al ejecutar primos[3] si tenemos la siguiente lista de Python?
+primos = [2, 3, 5, 7, 11, 13, 17, 19]
+7
+
+17. ¿Qué es una lista en Python?
+Son un tipo de datos donde se pueden almacenar colecciones de datos de cualquier tipo.
+
+18. ¿Qué se obtiene al ejecutar lo siguiente en una lista de Python?
+countries = ['MX', 'CO', 'PE', 'AR', 'ES', 'BR']
+countries.append('CL')
+print(countries)
+['MX', 'CO', 'PE', 'AR', 'ES', 'BR, 'CL']
+
+19. ¿Cuál es la forma correcta de declarar una tupla en Python?
+numbers = (10, 6, 7, 98, 23)
+
+20. ¿Cuál es la forma correcta de crear un diccionario en Python?
+inventory = {'televisions': 100, 'computers': 45, 'smartphones': 200, 'tablets': 34}
+
+21. ¿Para qué sirven los diccionarios en Python?
+Para guardar valores a los que podamos acceder fácilmente con su llave.
+
+22. ¿Qué son los ciclos, loops o bucles en programación?
+Instrucciones que ayudan a repetir cierta parte del código dado una condición o iterable.
+
+23. ¿Qué se obtiene al ejecutar el siguiente ciclo for en Python?
+elements = ['Water', 'Fire' ,'Wind', 'Earth']
+for element in elements:
+	print(element)
+Imprimirá uno por uno de los elementos de la lista en Python. Itera dentro de la lista.
+
+24. ¿Cuál es la diferencia entre un ciclo for y un while?
+Con el ciclo for tenemos definido cuántas veces iteramos, mientras que en el while es indefinido hasta que se cumpla la condición que indica.
