@@ -1,0 +1,9 @@
+Quiz ETL con Pentaho
+1. ¿Cuál es la función del step "Table output" en Pentaho PDI durante la carga de datos?
+Escribir datos en una tabla de base de datos de destino.
+
+2. ¿Cuál es la función del step "Merge Join" en Pentaho PDI durante la transformación de datos?
+Unir dos o más conjuntos de datos en función de una columna común.
+
+3. ¿Cuál es la función del step "Text file input" en Pentaho PDI durante la extracción de datos?
+Leer datos de un archivo de texto plano y convertirlos en un formato legible.

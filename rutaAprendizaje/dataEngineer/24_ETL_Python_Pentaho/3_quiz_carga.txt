@@ -1,0 +1,13 @@
+Quiz carga de datos
+1. Para hacer la carga a un target, ¿siempre se deben llevar los archivos previamente a un bucket como S3?
+Falso, esto solo se requiere si es la manera más óptima de hacer la ingesta de datos, como en Redshift.
+
+2. ¿Qué hace la línea de Pandas en el proceso de carga de datos?
+df_trades_final.to_csv('target/trades.csv',index=False, sep='|')
+Exporta el DataFrame "df_trades_final" como un archivo CSV en la ruta de archivo "target/trades.csv", utilizando el separador "|" y sin incluir los indices de fila en el archivo CSV.
+
+3. Si el target del ETL es una base de datos NoSQL, ¿sería adecuado cargarle datos estructurados SQL?
+No es conveniente, ya que los formatos no son similares y se debe garantizar la estructura necesaria para el warehouse.
+
+4. ¿Qué permisos de acceso a datos son necesarios para cargar datos desde un origen de datos a un destino de datos en un proceso ETL?
+Permisos de solo lectura en el origen de datos y permisos de escritura en el destino de datos. 
