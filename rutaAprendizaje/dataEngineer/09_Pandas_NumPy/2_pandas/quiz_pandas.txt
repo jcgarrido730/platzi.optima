@@ -1,0 +1,13 @@
+Quiz pandas
+
+1. ¿Cuál es el parámetro para especificar el delimitador del archivo en pd.read_csv()?
+sep
+
+2. De esta manera se pueden eliminar filas con valores nulos de un DataFrame en Pandas:
+df.dropna()
+
+3. ¿Con cuál de las opciones se ordenan los datos del DataFrame df_books de manera descendente por la columna year?
+df_books.sort_values('Year',ascending=False)
+
+4. ¿Cuál comando imprime las n primeras filas de un DataFrame de Pandas?
+head
