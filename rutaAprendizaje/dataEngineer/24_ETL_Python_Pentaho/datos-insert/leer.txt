@@ -1,0 +1,5 @@
+partir el archivo en partes iguales de 100MB y que añada un número al final de cada partición
+split -b -d 100m postgres_public_trades.sql postgres_public_trades.sql.
+
+unir las partes del archivo 
+cat postgres_public_trades.sql.* > postgres_public_trades.sql
