@@ -1,0 +1,12 @@
+Quiz extracción de datos
+1. ¿Cuál es el método de Pandas para leer SQL?
+pd.read_sql()
+
+2. ¿Qué se debe de hacer para conectarse a una base de datos SQL al iniciar un ETL en Python?
+Crear una conexión a la base de datos con 'create_engine' para poder leer directamente con SQL usando Pandas.
+
+3. ¿Es posible en un proceso de ETL extraer datos de los sources siempre que se quiera o se vea necesario?
+No, ya que se debe considerar cómo se va a impactar a la fuente de los datos en cada extracción.
+
+4. ¿Por qué es importante considerar el formato de los datos a extraer de la fuente del ETL?
+Para que ese formato sea compatible con la herramienta a ETL a usar o elegir una nueva herramienta.

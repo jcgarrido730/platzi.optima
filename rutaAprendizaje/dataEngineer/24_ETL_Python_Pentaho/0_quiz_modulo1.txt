@@ -1,0 +1,15 @@
+Quiz módulo 1
+1. ¿Cómo se segmentan las diferentes herramientas para ETL?
+Enterprise, cloud, open-source y custom
+
+2. ¿Cuál es la diferencia entre un proceso ETL en streaming o en batch?
+En batch es una tarea recurrente que se ejecuta cada cierto tiempo. Streaming es el proceso ejecutado casi en tiempo real procesando los datos constantemente.
+
+3. ¿Cuál es la parte de staging en un ETL?
+Es el espacio (generalmente en memoria) de cómputo donde se ejecutan las transformaciones de los datos. antes de la carga.
+
+4. Si dentro de una empresa se tiene un CRM con información de clientes, ¿esos datos podrían pasar por un ETL para ser analizados posteriormente?
+Sí es posibel, ya que se consideraría una fuente o source del ETL.
+
+5. ¿Cuál es el objetivo de un ETL en ingeniería de datos?
+Dejar datos confiables en un repositorio para que sean usados en proyectos de analítica, data science y de machine learning.

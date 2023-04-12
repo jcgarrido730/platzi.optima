@@ -1,0 +1,91 @@
+Curso de Fundamentos de Bases de Datos
+
+1. ¿Por que es importante tener un registro de información que perdure en el tiempo?
+Permiten que el conocimiento se perpetúe
+
+2. ¿Cuál es el otro nombre que se le da a las 12 reglas de Codd?
+Mandamientos
+
+3. ¿Cuáles son las formas en que una entidad puede ser débil?
+Identidad y existencia
+
+4. ¿Qué tipo de palabra se utiliza para denotar una relación entre dos entidades de una base de datos?
+Verbo
+
+5. Diferencia original entre char y varchar
+Char reserva estáticamente en memoria y varchar reserva variablemente
+
+6. ¿Cuántas formas normales vimos en clase?
+4
+
+7. ¿Cuál de los siguientes es un RDBMS open source?
+MariaDB
+
+8. ¿Por qué se les llama servicios administrados?
+Los administra una compañía dedicada
+
+9. ¿Qué significa la “S” en SQL?
+Structured
+
+10. ¿En qué fase de un proyecto se utiliza más fuertemente el lenguaje DDL?
+Al inicio
+
+11. ¿Cuál de los siguientes objetos se puede crear con la sentencia “create”?
+Tabla
+
+12. ¿Qué de lo siguiente se puede lograr con la sentencia "ALTER TABLE"?
+Agregar una columna
+
+13. La sentencia DROP puede borrar una base de datos (schema) completa
+Cierto
+
+14. ¿En qué fase de un proyecto se utiliza más fuertemente el lenguaje DML?
+En el día a día
+
+15. La sentencia UPDATE sirve para crear una nueva tupla si no existe
+Falso
+
+16. ¿Qué sentencia debemos agregar a la sentencia "DELETE" a manera de red de protección?
+WHERE
+
+17. La mayoría de sentencias SQL corren con mínimas modificaciones en cualquier RDBMS
+Cierto
+
+18. ¿Cuál es la principal sentencia de consulta?
+SELECT
+
+19. ¿Cuál es la estructura básica de un query de consulta?
+SELECT FROM WHERE
+
+20. ¿Cuál es un ejemplo de base de datos optimizada para búsqueda?
+Big Query
+
+21. ¿Cual es el objeto principal en la base de datos Firestore?
+Documento
+
+22. Las top level collection son las colecciones que tienen un documento padre
+Falso
+
+23. ¿Cuál de los siguientes es un tipo de dato en Firestore?
+String
+
+24. Utilizamos subcolecciones cuando queremos acceder a sus documentos de manera independiente o son referenciados desde otras colecciones
+Falso
+
+25. ¿A que se traducen las entidades de un RDBMS en Firestore?
+Colecciones
+
+26. ¿A que se traducen las tuplas de un RDBMS en Firestore?
+Documentos
+
+27. ¿Cuál es el caso de uso principal de una base de datos basada en documentos?
+El estado actual de una aplicación
+
+28. ¿Cuál es el caso de uso principal de una base de datos basada en grafos?
+Relaciones complejas y machine learning
+
+29. ¿Cuál es el propósito principal del Business Intelligence?
+Ayudar a tomar mejores decisiones
+
+30. ¿Cuáles son las dos funciones básicas de la mayoría de servicios de machine learning?
+Predicción y clasificación

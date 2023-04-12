@@ -1,0 +1,19 @@
+Quiz transformación de datos
+1. ¿A qué se refiere con realizar agregaciones en los datos en el proceso de transformación del ETL?
+Agrupar los datos con algún calculo analítico para dejar información lista para analizar en el target.
+
+2. ¿Por qué es importante conocer la estructura final de los datos que llegarán al target en el ETL?
+Así se pueden elegir herramientas y librerias para llegar a esa estructura.
+
+3.¿Por qué Pandas de Python es muy útil para procesos de ETL y de ingeniería de datos?
+Porque permite manipular, transformar y limpiar datos con un lenguaje sencillo como Python.
+
+4. ¿Qué hace esta línea de Pandas para transformación de datos?
+df_countries['id_country'] = df_countries.index + 1
+Crea una columna llamada "id_country" en el DataFrame "df_countries" y le asigna valores que van desde 1 hasta el número total de filas en el DataFrame.
+
+5. ¿Siempre es necesario aplicar una función lambda de Python a un set de datos o se puede pre-definir una función para luego aplicarla en un proceso de transformación de datos?
+No es necesario usar exclusivamente una función lambda para aplicar a un DataFrame.
+
+6. Si deseo saber el total de ventas por producto en algún proceso de transformación de datos, ¿qué función de agregación debería aplicar?
+Suma

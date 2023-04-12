@@ -1,0 +1,16 @@
+Quiz numpy
+
+1. ¿Qué línea de código genera este array de NumPy?
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+np.arange(0,10)
+
+2. ¿Cómo se asigna de forma correcta al array_copy una copia de el array arr?
+array_copy = arr.copy()
+
+3. ¿Qué número retorna esta sentencia?
+np.array([[1,2,3],[4,5,6],[7,8,9]]).ndim
+2
+
+4. ¿Con cuál de las siguientes opciones se obtiene el siguiente array de NumPy?
+array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+np.array([[1,2,3],[4,5,6],[7,8,9]])
