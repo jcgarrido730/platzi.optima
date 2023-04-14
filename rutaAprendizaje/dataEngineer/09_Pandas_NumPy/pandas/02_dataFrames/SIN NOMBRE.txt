@@ -1,0 +1,7 @@
+Buenos dias,
+Me ecncuentro realizando la carga de información de casa de cobranzas, pero encuentro que los archivos enviados tienen diferencias en cuanto al orden de las columnas, este orden es importate porque el desarrollo que se hizo en su momento espera que el archivo este en ese orden para cargar la información y si intento cargarlo asi genera errores en los campos de fecha y numéricos, en otros casos el tipo de dato cadena de caracteres coinciden pero el contenido de esa columna no va a corresponder con el campo de la tabla.
+
+Adjunto archivo de excel comparando el orden inicial de las columnas y el orden de los archivos recibidos.
+
+Cristian es posible generar la información en ese orden?
+Gracias.

@@ -1,0 +1,3 @@
+Data WareHouse: Almacen de datos
+Data Mart: Áreas del Almacen (finanzas, ventas, recursos humanos)
+Dimensión: Análisis de una métrica o la información desde distintas perspectivas. 
