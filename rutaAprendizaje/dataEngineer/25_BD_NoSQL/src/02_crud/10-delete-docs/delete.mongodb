@@ -1,0 +1,10 @@
+// eliminar 1 documento por id
+use("tienda_platzi")
+ db.productos.deleteOne({ _id: 1 })
+
+// elimina varios documentos por precio
+use("tienda_platzi")
+db.productos.deleteMany({ precio: 100 })
+
+// elimina todos los documentos
+db.productos.drop()

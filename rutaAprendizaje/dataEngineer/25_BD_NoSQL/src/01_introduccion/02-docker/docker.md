@@ -1,10 +1,10 @@
-# Up mongodb
+# subir mongodb
 
 ```sh
 docker-compose up -d mongodb
 ```
 
-# Check
+# validar mongodb
 
 ```sh
 docker-compose ps

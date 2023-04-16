@@ -1,0 +1,18 @@
+use("tienda_platzi")
+
+// remove one element from array
+/* db.inventario.updateMany({_id:4}, { actualiza el id 4, vacio trae todos los documentos*/
+// db.inventario.updateMany({}, {
+//   $pull: {
+//     etiquetas: "book"
+//   }
+// })
+
+// remove others elements from array
+db.inventario.updateMany({}, {
+  $pull: {
+    etiquetas: {
+        $in: ["appliance", "school"]
+    }
+  }
+})

@@ -1,0 +1,34 @@
+use("tienda_platzi")
+db.iot.insertOne({
+  sensor: "A001",
+  fecha: "2022-01-03",
+  lecturas: [1212]
+})
+
+use("tienda_platzi")
+db.iot.find({
+  sensor: "A001",
+  fecha: "2022-01-03",
+}).count()
+
+use("tienda_platzi")
+db.iot.updateOne({
+  sensor: "A001",
+  fecha: "2022-01-03",
+}, {
+  $push: {
+    lecturas: 2323
+  }
+})
+
+// eliminar un elemento
+// use("tienda_platzi")
+// db.iot.updateOne({
+//   sensor: "A001",
+//   fecha: "2022-01-03",
+// }, {
+//   $pop: {
+//     lecturas: 1
+//   }
+// })
+
