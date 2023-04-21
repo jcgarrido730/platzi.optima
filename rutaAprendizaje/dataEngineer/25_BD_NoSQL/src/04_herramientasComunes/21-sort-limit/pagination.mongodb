@@ -1,0 +1,6 @@
+use("tienda_platzi")
+
+db.categorias
+  .find()
+  .skip(9)
+  .limit(3)

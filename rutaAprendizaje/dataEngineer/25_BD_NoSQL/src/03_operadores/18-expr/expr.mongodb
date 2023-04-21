@@ -1,0 +1,9 @@
+use("tienda_platzi")
+
+// db.presupuestoMensual.find({ gastado: {$gte: 100} })
+
+db.presupuestoMensual.find({
+  $expr: {
+    $gte: ["$gastado", "$presupuesto"]
+  }
+})

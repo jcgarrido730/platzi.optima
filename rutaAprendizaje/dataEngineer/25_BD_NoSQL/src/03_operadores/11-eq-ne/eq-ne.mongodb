@@ -1,0 +1,12 @@
+use("tienda_platzi")
+
+
+// Using $eq
+// db.inventario.find({ cantidad: 20 })
+// db.inventario.find({ cantidad: { $eq: 20 } })
+// db.inventario.find({ "item.code": "123" })
+// db.inventario.find({ "item.code": { $eq: "123" } })
+
+// Using $ne
+db.inventario.find({ cantidad: { $ne: 20 } })
+

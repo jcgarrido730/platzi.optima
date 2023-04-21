@@ -1,0 +1,17 @@
+use("tienda_platzi")
+
+
+// Using $gt (>) & $gte (>=)
+// db.inventario.find({ cantidad: { $gt: 20 } })
+// db.inventario.find({ cantidad: { $gte: 20 } })
+
+// Using $lt (<) & $lte (<=)
+// db.inventario.find({ cantidad: { $lt: 20 } })
+// db.inventario.find({ cantidad: { $lte: 20 } })
+
+// Join
+// db.inventario.find({ cantidad: { $gte: 25, $lte: 35 } })
+db.inventario.find({
+  "item.codigo": { $ne: "123" },
+  cantidad: { $gte: 20, $lte: 25 }
+})

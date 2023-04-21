@@ -1,0 +1,2 @@
+use ("tienda_platzi")
+db.productos.find()

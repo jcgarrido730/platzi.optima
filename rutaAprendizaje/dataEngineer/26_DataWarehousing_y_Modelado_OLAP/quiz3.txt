@@ -1,0 +1,16 @@
+Quiz 3 ETL para inserción en Data Warehouse
+
+1. Si en tu proceso de extracción identificas registros nuevos y también registros existentes en la dimensión del DWH, ¿cuál estrategia se debe aplicar para almacenarlos en una dimensión lentamente cambiante tipo 1?
+Se le asigna un id nuevo a los registros nuevos y se insertan. A los registros existentes se les asigna el mismo id que ya se tienen y se actualizan sus atributos en la dimensión.
+
+2. ¿Para una dimensión lentamente cambiante tipo 1, los registros viejos (existentes en la dimensión y que llegan de nuevo por actualización) deben ser actualizados y no insertados?
+Verdadero.
+
+3. ¿Cómo se identifican los ids de las dimensiones en la carga de la tabla de hechos?
+Se cruzan los codigos operativos de la tabla transaccional con cada una de las dimensiones correspondientes.
+
+4. ¿Cuál estrategia es la más adecuada para extraer los datos de una tabla transaccional que contiene un volumen muy alto de datos?
+Consultar únicamente los registros nuevos y actualizarlos por medio de un campo pivot, enviando como parámetro la fecha máxima almacenada en la dimensión.
+
+5. ¿Qué es un documento de mapeo?
+Es un docmento utilizado en el proceso de ETL para comprender la estructura de los datos de origen y destino, así como para planificar la transformación y carga de los datos en el Data Warehouse. 

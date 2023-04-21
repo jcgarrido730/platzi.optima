@@ -1,0 +1,30 @@
+use("tienda_platzi")
+
+// $in: sirve para valores y arrays. Se comporta como un or
+// db.inventario.find({ cantidad: { $in: [20, 25]} })
+// db.inventario.find({ etiquetas: { $in: ["book", "electronics"]} })
+
+// $nin: sirve para valores & arrays. Es la negación del $in y se comporta como un or
+// db.inventario.find({ cantidad: { $nin: [20, 25]} })
+// db.inventario.find({ etiquetas: { $nin: ["book", "electronics"]} })
+
+// db.inventario.find({ etiquetas: "book" })
+// db.inventario.find({ etiquetas: ["school", "book"] })
+// db.inventario.find({ etiquetas: ["book", "school"] })
+
+// Estos solo funcionan para arrays
+// arrays $all: Se comporta como un and
+// db.inventario.find({ etiquetas: {$all: ["book", "school"]} })
+
+// $size: que solo tenga x cantidad de elementos
+// db.inventario.find({ etiquetas: {$size: 2} })
+
+// $elemMatch
+// db.encuesta.find({ resultados: { $elemMatch: { producto: "xyz" }} })
+db.encuesta.find({
+  resultados:{
+    $elemMatch: {
+      producto: "xyz",
+      puntaje: { $gte: 7 }
+    }}
+  })

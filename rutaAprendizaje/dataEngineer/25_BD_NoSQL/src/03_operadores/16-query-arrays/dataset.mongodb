@@ -1,0 +1,44 @@
+use("tienda_platzi")
+
+db.inventario.drop()
+
+db.inventario.insertMany([
+  { _id: 1, item: { nombre: "ab", codigo: "123", descripcion : "Single line description."    }, cantidad: 15, etiquetas: [ "school", "book", "bag", "headphone", "appliance" ] },
+  { _id: 2, item: { nombre: "cd", codigo: "123", descripcion : "First line\nSecond line"     }, cantidad: 20, etiquetas: [ "appliance", "school", "book" ] },
+  { _id: 3, item: { nombre: "ij", codigo: "456", descripcion : "Many spaces before     line" }, cantidad: 25, etiquetas: [ "school", "book" ] },
+  { _id: 4, item: { nombre: "xy", codigo: "456", descripcion : "Multiple\nline description"  }, cantidad: 30, etiquetas: [ "electronics", "school" ] },
+  { _id: 5, item: { nombre: "mn", codigo: "000" }, cantidad: 20, etiquetas: [ "appliance", "school" ] },
+])
+
+db.encuesta.drop()
+
+db.encuesta.insertMany([
+  {
+    _id: 1,
+    resultados: [
+      { producto: "abc", puntaje: 10 },
+      { producto: "xyz", puntaje: 5 },
+    ],
+  },
+  {
+    _id: 2,
+    resultados: [
+      { producto: "abc", puntaje: 8 },
+      { producto: "xyz", puntaje: 7 },
+    ],
+  },
+  {
+    _id: 3,
+    resultados: [
+      { producto: "abc", puntaje: 7 },
+      { producto: "xyz", puntaje: 8 },
+    ],
+  },
+  {
+    _id: 4,
+    resultados: [
+      { producto: "abc", puntaje: 7 },
+      { producto: "def", puntaje: 8 },
+    ],
+  },
+])

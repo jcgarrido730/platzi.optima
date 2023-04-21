@@ -1,0 +1,12 @@
+use("tienda_platzi")
+
+db.iot.updateMany(
+  // query
+  { sensor: "A001" },
+  // update
+  {
+    $pull: {
+      lecturas: { $gte: 3 }
+    }
+  }
+)

@@ -1,0 +1,7 @@
+use("tienda_platzi")
+
+db.inventario.updateOne({_id: 4}, {
+  $push: {
+    etiquetas: "headphone"
+  }
+})
