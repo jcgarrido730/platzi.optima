@@ -1,0 +1,13 @@
+use("tienda_platzi")
+
+db.presupuestoMensual.drop()
+
+db.presupuestoMensual.insertMany([
+  { "_id" : 1, "categoria" : "alimentos",    "presupuesto": 400, "gastado": 450 },
+  { "_id" : 2, "categoria" : "bebidas",  "presupuesto": 100, "gastado": 150 },
+  { "_id" : 3, "categoria" : "ropa", "presupuesto": 100, "gastado": 50  },
+  { "_id" : 4, "categoria" : "varios",    "presupuesto": 500, "gastado": 300 },
+  { "_id" : 5, "categoria" : "viajes",  "presupuesto": 200, "gastado": 650 }
+])
+
+db.presupuestoMensual.find()

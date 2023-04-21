@@ -1,0 +1,17 @@
+Quiz 2 Modelos dimensionales
+
+1. De la siguiente pregunta de negocio identifica sus dimensiones y hechos. ¿Cuáles fueron las tiendas que más ventas en cantidades y valores realizaron en los últimos 3 años para los países de México, Colombia y Brasil, por zona, ciudad y mes?.
+Dimensiones: tienda, tiempo
+Hechos: cantidades vendidas, valor de venta
+
+2. ¿Cuál es la tabla donde se almacenan las métricas o los indicadores que se desean medir?
+Tabla de hechos (FACT)
+
+3. ¿Cuál tipo de dimensión lentamente cambiante debería usar si busco mantener el histórico de un registro a nivel de columnas?
+Tipo 3
+
+4. ¿Cuál es la diferencia entre el modelo estrella y el modelo copo de nieve?
+En el modelo estrella todas las tablas de dimensiones se relacionan directamente con la tabla de hechos. Mientras que en el modelo copo de nieve las tablas de dimensiones se normalizan en varias tablas mas pequeñas en lugar de una tabla grande
+
+5. ¿Qué es un Data Lake?
+Es un tipo de repositorio de datos que se utiliza para almacenar grandes cantidades de datos estructurados, semiestructurados y no estructurados como audio y video

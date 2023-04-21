@@ -1,0 +1,8 @@
+use("tienda_platzi")
+
+// db.inventario.find({ "item.descripcion": "Single line description." })
+// db.inventario.find({ "item.descripcion": { $regex: /line/ } })
+// db.inventario.find({ "item.descripcion": { $regex: /LINE/i } })
+// db.inventario.find({ "item.descripcion": { $regex: /line$/i } })
+// db.inventario.find({ "item.descripcion": { $regex: /^single/i } })
+db.inventario.find({ "item.descripcion": { $regex: /^s/im } })
