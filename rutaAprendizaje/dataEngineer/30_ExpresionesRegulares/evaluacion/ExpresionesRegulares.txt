@@ -4,8 +4,7 @@ Curso Expresiones Regulares
 .
 
 2. Para usar un rango de caracteres (por ejemplo 0-9 o a-g) lo tenemos que delimitar en la expresión con:
-*{}
-respuesta mala
+[]
 
 3. Si quisiera hacer que una expresión no distinga entre mayúsculas y minúsculas, debo agregarle la bandera:
 /i
@@ -20,8 +19,7 @@ cero o más a
 cero o sólo una a
 
 7. El patrón a+ significa exactamente:
-*una a y cualquier otro caracter
-respuesta mala
+una o más a
 
 8. La clase \w es equivalente a:
 [a-zA-Z0-9_]
@@ -48,8 +46,7 @@ una línea que empiece con 1
 $
 
 16. La expresión [^rm][a-z]+ encontrará:
-*Todas las líneas que NO empiecen con “r” o “m”
-respuesta mala
+Todas las palabras que NO empiecen con “r” o “m”
 
 17. Cuál de las siguientes líneas NO hará match con la expresión /^[\w\s]+$/:
 12,34,56,78
@@ -59,8 +56,7 @@ respuesta mala
 prueba@gmail.com
 
 19. Supongamos que tenemos un archivo csv con códigos de producto, todos los códigos son dos caracteres seguidos por 8 a 10 dígitos, pero sólo queremos los productos que empiecen con AB o CD, ¿qué expresión usarías?
-*/^(AB)(CD){2,2}\d{8,10}$/
-respuesta mala
+/^(AB|CD)\d{8,10}$/
 
 20. Cuando tenemos un problema y lo planeamos solucionar con expresiones regulares, entonces:
 tardaremos un poco más en solucionarlo, pero tendremos una solución robusta y duradera
