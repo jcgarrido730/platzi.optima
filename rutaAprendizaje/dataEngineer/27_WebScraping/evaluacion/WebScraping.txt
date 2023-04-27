@@ -10,8 +10,7 @@ requests.get(url)
 Utilizando el método find y buscando por el nombre del tag y sus atributos.
 
 4. ¿Cómo extraemos un atributo de un tag?
-*Utilizando el método find(atributo).
-respuesta mala
+Utilizando el método get(atributo)
 
 5. ¿Cómo podemos hacer para prevenir que una excepción interrumpa la ejecución del programa?
 Usando la sentencia try, except.
@@ -50,15 +49,17 @@ Una interfaz para programar aplicaciones.
 Porque no estamos enviando el token de autorización.
 
 17. ¿Qué dato debemos incluir en el encabezado de cualquier solicitud para que nos autoricen la respuesta?
-*Siempre el client_id + client_secret codificado en base64
-respuesta mala
+Depende de la solicitud. Hay que leer la documentación
 
 18. Para acceder al endpoint de un álbum y conocer sus canciones:
-*Debemos conocer el id del álbum y el id del artista.
-respuesta mala
+Debemos conocer el id de ese álbum
 
 19. ¿Qué significa usar un proxy?
 Que hay un intermediario entre el cliente y el servidor.
 
 20. ¿Para qué sirve Tesseract?
 Para hacer reconocimiento óptico de caracteres a partir de una imagen.
+
+21. Hacer Web Scraping implica:
+*Indexar todos los links de una página web.
+respuesta mala
