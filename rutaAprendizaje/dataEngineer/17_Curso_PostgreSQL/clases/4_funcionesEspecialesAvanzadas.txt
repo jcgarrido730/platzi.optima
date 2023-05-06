@@ -1,0 +1,11 @@
+Funciones Especiales avanzadas en PosgreSQL
+
+• COALESCE : compara dos valores y retorna el que no es nulo
+
+• NULLIF: compara dos valores y retorna null si son iguales
+
+• GREATEST: Compara un arreglo y retorna el mayor
+
+• LEAST: Compara un arreglo de valores y retorna el menor
+
+• BLOQUES ANONIMOS: Ingresa condicionales dentro de una consulta de BD
