@@ -1,0 +1,13 @@
+Quiz Seaborn
+
+1. ¿Qué parámetro se debe usar en Seaborn para lograr separar los gráficos por la columna time como muestra la imagen?
+col="time"
+
+2. En un histograma en Seaborn (histplot), ¿qué valor en el parámetro multiple debemos usar para lograr algo como muestra la imagen?
+stack
+
+3. ¿Cómo se puede eliminar la barra señalada en la gráfica de heatmap de Seaborn?
+cbar=False
+
+4. ¿Esta gráfica de Seaborn a qué tipo de gráfico corresponde?
+swarmplot

@@ -1,0 +1,15 @@
+Quiz Matplotlib
+
+1. De esta manera puedo usar subplots para generar 3 gráficos de 1 fila y 3 columnas:
+fig, axes = plt.subplots(1, 3)
+
+2. ¿Cómo puedo agregar un título a la primera figura (superior derecha) en el siguiente código de Matplotlib?
+fig, axes = plt.subplots(nrows=1,ncols=2,figsize=(5,5))
+axes[1].set_title('Titulo')
+
+3. ¿Qué parámetro falta para mostrar cada dato como un polígono/pentágono en este scatter plot?
+plt.scatter(x, y,s=area, alpha=0.5, c =colors)
+marker='p'
+
+4. Es la manera estándar de importar Matplotlib:
+import matplotlib.pyplot as plt 
