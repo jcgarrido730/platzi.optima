@@ -1,0 +1,399 @@
+1. ¿Qué son las plantillas de proyectos?
+
+Las plantillas de proyectos son un medio que posibilita portar o construir un diseño predefinido. Estas te permiten definir carpetas, notebooks, scripts, archivos de configuración, etc.
+¿Por qué usar plantillas de proyectos?
+
+Algunas razones para usar plantillas en proyectos se debe a que:
+
+    Agiliza tu trabajo y reduce la fatiga por decisión.
+    Es más fácil de personalizar un proyecto hecho con plantillas que hecho desde cero.
+    La reproducibilidad de un proyecto es más viable.
+    Es más fácil encontrar algo entre los componentes del proyecto.
+
+--	
+2. ¿Qué es Cookiecutter?
+
+Es un manejador de plantillas multiplataforma (Windows, Mac OS, Linux) que te permite hacer plantillas en lenguaje de programación o formato de marcado. Puede ser usado como herramienta de línea de comandos o como librería de Python.
+
+Cookiecutter funciona con Jinja, un motor de plantillas extensible con el cual puedes crear plantillas como si estuvieras escribiendo código en Python.
+¿Cómo funciona?
+
+Hay 3 pasos para entender la manera en que funciona:
+
+    Detectará una sintaxis especial en los documentos y carpetas de tu proyecto.
+    Buscará variables y valores a reemplazar.
+    Finalmente, entregará un proyecto con la estructura definida en la plantilla.
+
+Sintaxis de Jinja
+
+Existen 3 tipos diferentes de bloques:
+
+    Bloques de expresión: se usan para incluir variables en la plantilla:
+
+{{ cookiecutter.saluda }}
+
+    Bloques de declaración: se usan para el uso de condicionales, ciclos, etc.:
+
+{% if coockiecutter.eres_asombroso %}
+. . .
+{% endif %}
+
+    Bloques de comentario: se usan para dejar comentarios o recomendaciones a los propios desarrolladores:
+
+{# Esto es un comentario #}
+
+Instalación de Cookiecutter
+
+Importante: Todos los pasos son vía consola y con Anaconda instalado.
+
+    Crea una carpeta un entrar en ella:
+
+mkdir <nombre_carpeta>
+cd <nombre_carpeta>
+
+    Agrega el canal Conda-Forge a tu configuración global:
+
+conda config --add channels conda-forge
+
+    Crea un ambiente virtual que contenga a Coockiecutter:
+
+conda create --name <nombre_ambiente> coockiecutter=1.7.3
+
+    Activa el ambiente virtual:
+
+conda activate <nombre_ambiente>
+
+    Definir en dónde estará tu ambiente:
+
+conda env export --from-history --file environment.yml
+
+Para desactivar el ambiente virtual:
+
+conda deactivate
+
+--
+3. Estructura inicial de la plantilla
+
+Dentro de la carpeta principal crea la carpeta que contendrá todo lo que necesitarás en tu proyecto con el nombre:
+
+{{ coockiecutter.project.slug }}
+
+En la carpeta recién creada agrega los siguientes archivos:
+
+README.md
+environment.yml
+coockiecutter.json
+
+También crea las carpetas que necesitará tu proyecto:
+
+/data
+/notebooks
+
+Afuera de la carpeta, pero dentro de la carpeta principal, crea el siguiente archivo:
+
+environment.yml
+
+Hay dos archivos environment.yml, el de configuración de entorno (dentro de la carpeta que creaste) y el que configura las dependencias y paquetes (en la carpeta principal).
+Información de README.md
+
+Adentro del archivo README.md agrega las siguientes líneas que lo harán un archivo dinámico:
+
+# {{ coockiecutter.project_title }}
+By: {{ coockiecutter.project_author_name }}
+{{ coockiecutter.project_description }}
+
+Estas líneas, hechas en Jinja, permitirán a tu archivo acceder a las variables que contienen la información del título, autor y descripción del proyecto.
+Información de environment.yml (entorno)
+
+# conda env create --file environment.yml
+name: cookiecutter-personal-platzi
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - cookiecutter
+
+Información de environment.yml (configuración)
+
+# conda env create --file environment.yml
+name: {{ cookiecutter.project_slug }}
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  {% if cookiecutter.project_packages == "All" -%}
+  - fs
+  - jupyter
+  - jupyterlab
+  - pathlib
+  {% endif -%}
+  - pip
+  {% if cookiecutter.project_packages == "All" -%}
+  - pyprojroot
+  {% endif -%}
+  - python={{ cookiecutter.python_version }}
+  - pip:
+    {% if cookiecutter.project_packages == "All" -%}
+    - pyhere
+    {% endif -%}
+
+Agregando información a coockiecutter.json
+
+Dentro de este archivo configurarás todos los valores de las variables que utilizas en los demás archivos:
+
+{
+    "project_title": "Cookiecutter Personal",
+    "project_slug": "{{ coockiecutter.project_title.lower().replace(" ", "_").replace("-", "_") }}",
+    "project_description": "Tu primer proyecto con Cookiecutter.",
+    "project_author_name": "Tu nombre",
+    "project_packages": ["All, Minimal"],
+    "python_version": "3.7"
+}
+
+Ejecuta el proyecto
+
+    Inicializas el Coockiecutter con conda.
+    Configuras la instalación, como en la clase anterior.
+
+--
+4. Introducción a Hooks
+
+Los Hooks son sentencias que se van a ejecutar antes o después de generar la plantilla de datos. Por ejemplo, puedes usarlos para verificar el nombre de una carpeta, actualizar git, etc.
+Implementación de Hooks
+
+    Se crea la carpeta “hooks”, adentro de la carpeta principal de tu proyecto.
+    Dentro de la carpeta se agregan los archivos “pre_gen_project.py” (lo que se ejecuta antes de generar la plantilla) y “pos_gen_project.py” (lo que se ejecuta después de generar la plantilla).
+
+Por ejemplo, en “pre_gen_project.py” se puede inicializar git o validar nombres y archivos para evitar errores.
+
+En el archivo “pos_gen_project.py” se puede hacer el primer commit en git o mostrar la finalización de la instalación de dependencias.
+
+
+--
+5. Distribución de tu plantilla (GitHub)
+Almacenar tu plantilla te permite poder compartirla con los demás y poder acceder a ella cuando necesites crear un nuevo proyecto.
+
+    Crea un nuevo repositorio vacío en GitHub. Puedes no agregar ninguna información sobre tu repositorio por el momento.
+    Dentro de la carpeta que contiene tu proyecto inicializa git y haz tu primer commit:
+
+git init .
+git add .
+git commit -m "Initial commit"
+
+    Ahora, para subir a GitHub tu proyecto, ejecuta lo siguiente:
+
+git remote add origin https://github.com/<usuario>/<repositorio>.git
+git branch -M main
+git push -u origin main
+
+    No olvides eliminar cualquier carpeta innecesaria (por ejemplo, la carpeta que se genera cuando ejecutas Coockiecutter).
+    Para evitar que git ignore las carpetas vacías, agrega un archivo “.gitkeep” dentro de cada carpeta vacía.
+
+Cuando usas “cookiecutter” como parte del nombre de tu proyecto, este puede ser encontrado por otras personas en GitHub. De esta forma podrás ayudar a otros científicos de datos, facilitándoles el trabajo.
+
+
+--
+6. Manejo de rutas: problemática
+
+Un problema común en el manejo de rutas es la incompatibilidad entre los sistemas de archivos de los sistemas operativos, ya sea Windows, Mac, Linux o WSL. Por ejemplo, Windows utiliza el “backslash” en sus rutas de archivos, mientras que el resto usa el “foward slash”.
+Solución al manejo de rutas
+
+Esto hace que, cuando inicies un nuevo proyecto, tengas que hacerte varias preguntas, por ejemplo:
+
+    ¿Habrá más personas involucradas?
+    ¿Habrá más de un ordenador involucrado?
+    ¿Cuál será la ubicación del proyecto, dentro del sistema de archivos de cada ordenador?
+    ¿Cómo se vería afectado un proyecto si reestructuras su contenido, en una fase intermedia de desarrollo?
+
+Deberías poder trabajar en tu proyecto y no tener que preocuparte por nada más que eso.
+
+
+--
+7. Manejo de rutas del sistema: OS
+
+Objetivo
+
+Crear la ruta “./data/raw/” independiente del sistema operativo. En este caso usaremos os, un módulo de Python que sirve para manejar rutas.
+
+IMPORTANTE: cerciórate de que estás trabajando en el entorno correcto.
+Implementación
+
+Dentro del notebook de jupyter:
+
+import os
+
+CURRENT_DIR = os.getcwd()  # Ruta actual de trabajo
+DATA_DIR = os.path.join(CURRENT_DIR, os.pardir, "data", "raw")  # Ruta objetivo (os.pardir: ruta padre)
+
+os.path.exists(DATA_DIR)  # Revisa si el path existe
+os.path.isdir(DATA_DIR)  # Revisa si es un directorio
+
+os.listdir(DATA_DIR)  # Itera por los archivos dentro del directorio
+
+os.mkdir(os.path.join(DATA_DIR, "os"))  # Crea la carpeta *"os"*
+
+
+--
+8. Manejo de rutas del sistema: Pathlib
+Objetivo
+
+Crear la ruta “./data/raw/” independiente del sistema operativo. Ahora usaremos pathlib, otro módulo de Python.
+Implementación
+
+Dentro del notebook de jupyter:
+
+import pathlib
+
+pathlib.Path()  # Genera un objeto Unix Path o 
+
+CURRENT_DIR = pathlib.Path().resolve()  # Path local completo
+DATA_DIR = CURRENT_DIR.parent.joinpath("data", "raw")  # Directorio objetivo
+
+DATA_DIR.exists()  # Revisa si el directorio existe
+DATA_DIR.is_dir()  # Revisa si es un directorio
+
+Utiliza el método “parent” para obtener el directorio padre y de ahí concatenar el path de las carpetas “data” y “raw”.
+
+Puedes crear una carpeta dentro de un directorio, usando el método “mkdir”:
+
+DATA_DIR.joinpath("<nombre_carpeta>").mkdir()
+
+Para buscar la ruta de un archivo dentro del proyecto, usando regex:
+
+list(DATA_DIR.glob("<nombre_archivo>"))
+
+
+--
+9. Manejo de rutas del sistema: PyFilesystem2
+Objetivo
+
+Crear la ruta “./data/raw/” independiente del sistema operativo. Ahora usaremos PyFilesystem2.
+Implementación
+
+Dentro del notebook de jupyter:
+
+import fs
+
+fs.open_fs(".")  # Abre una conexión con el path actual (OSFS)
+
+CURRENT_DIR = fs.open_fs(".")
+
+CURRENT_DIR.exists(".")  # Revisa si el directorio existe
+DATA_DIR.listdir(".")  # Muestra el contenido dentro de la ruta.
+
+    PyFilesystem2 genera un objeto OSFS (Operating System Filesystem).
+
+    El inconveniente con este módulo es que el objeto OSFS solo detecta los objetos que existen en la ruta actual, por lo que si intentas acceder a un archivo ubicado en el directorio padre “…” te saltará un IndexError.
+
+    Si necesitas que el objeto OSFS también detecte el directorio padre, además de las carpetas “data” y “raw”, vuelve a generar el objeto de la siguiente forma:
+
+fs.open_fs("../data/raw/")  # Ruta objetivo
+
+
+--
+10. Crear referencias relativas de archivos
+Objetivo
+
+Necesitamos encontrar una forma de evitar que nuestro proyecto se rompa cuando movamos de lugar un archivo dentro del proyecto, para esto usaremos Referencias Relativas.
+Implementación
+
+Usando PyProjRoot:
+
+import pyprojroot
+
+pyprojroot.here()  # Esto es un Posix Path (pathlib)
+pyprojroot.here().joinpath("data", "raw") 
+
+    El path en pyprojroot se construye desde la raíz, no desde el path del archivo que lo ejecuta.
+    Puedes mover el archivo a cualquier parte de la carpeta del proyecto, pero los paths no se romperán.
+
+Usando PyHere:
+
+import pyhere
+
+pyhere.here()  # También regresa un Posix Path
+
+    El directorio que regresa es el directorio padre del directorio actual.
+
+Comparación
+
+Estas dos líneas de código regresan el mismo resultado:
+
+pyprojroot.here("data").joinpath("raw")
+pyhere.here().resolve() / "data" / "raw"
+
+    Estas dos librerías sirven para crear shortcuts. Para esto, se puede usar la siguiente función:
+
+def make_dir_function(dir_name):
+    def dir_function(*args):
+        return pyprojroot.here()joinpath(dir_name, *args)
+    return dir_function
+
+
+data_dir = make_dir_function("data")
+data_dir("raw", "pathlib")  # Devuelve el path personalizado
+
+    Puedes crear la cantidad de shortcuts que tu proyecto necesite.
+
+
+--
+11. Descarga de plantilla y configuración de ambiente virtual
+Descarga e Instalación
+
+Para instalar y ejecutar la plantilla a usar, en el caso práctico, en una terminal escribir:
+
+conda activate <nombre_entorno_cookiecutter>
+cookiecutter https://github.com/jvelezmagic/cookiecutter-conda-data-science
+
+Durante la instalación de la plantilla y para que puedas reproducir el proyecto del profesor, elige las siguientes opciones:
+
+    Select project packages: Minimal
+    Python version: 3.9
+
+Activación
+
+Para activar el proyecto, ejecutar lo siguiente en consola:
+
+cd <nombre_carpeta_proyecto>
+conda env create --file environment.yml
+conda list python
+code .
+
+
+--
+12. Utilizar proyecto como un módulo de Python
+Una vez descargado, puedes instalar un proyecto como módulo de Python usando el siguiente comando en la terminal:
+
+pip install --editable .
+
+Para que se reinicie el kernel, cada vez que reimportes los módulos después de hacer un cambio en estos, agrega esto en la primera celda:
+
+%load_ext autoreload
+%autoreload 2
+
+    El hacer el autoreload te ayuda a externalizar trozos de código en archivos .py, como la creación de gráficos.
+    Los notebooks son buenos para hacer exploración, pero no para producción.
+
+
+--
+13. Flujo de trabajo de los notebooks
+Recomendaciones
+
+    Crear subcarpetas dentro de la carpeta de notebooks para mayor organización del código.
+
+    Se recomienda utilizar un sistema de nombrado de los notebooks, como el siguiente:
+
+<número_notebook>-<nombre_programador>-<nombre_notebook>.ipynb
+
+    También puedes exportar el notebook a texto plano (archivo .py).
+
+
+--
+14. Conclusiones
+
+    Ahora que ya conoces todo lo que las plantillas de trabajo pueden darte, úsalas para agilizar tu productividad y enfocarte en lo que realmente importa, y para hacerle la vida más fácil a los que usen tus proyectos.
+    Recuerda utilizar los manejadores de rutas para enraizar tus proyectos y tener un entorno de archivos organizado e independiente del sistema de archivos y sistema operativo.
+    Emplea todos los conocimientos adquiridos en este curso en tus proyectos de Data Science, Machine Learning y Deep Learning.
+
