@@ -1,0 +1,77 @@
+Curso de Fundamentos de Spark para Big Data
+
+1. ¿Con qué lenguajes de programación se puede usar Apache Spark?
+Python, Scala, R y Java.
+
+2. A diferencia se Hadoop, ¿sobre qué medio de almacenaje opera Spark principalmente?
+RAM
+
+3. ¿Se pueden hacer transacciones en tiempo real con Apache Spark?
+Falso
+
+4.¿Cuál es la característica principal que poseen los RDD y DF de Apache Spark?
+Son colección inmutables, distribuidos y funcionan de manera lazy.
+
+5. ¿Cuáles son las dos principales diferencias entre un RDD y un DataFrame?
+Un DataFrame posee estructura formal y un tipo de dato en cada columna.
+
+6. ¿Cuál es la diferencia principal entre filter() y sample()?v
+Filter permite obtener valores de un RDD a partir de una función base. Sample permite obtener valores de un RDD a partir de un porcentaje.
+
+7. ¿Productivamente qué tipo de conteo es el más recomendable a usar?
+countApprox()
+
+8. ¿Cuál es es el método recomendado para saber si tenemos valores duplicados?
+count()
+countApprox()
+*respuestas malas
+countApproxDistinct()
+
+9. ¿La operación collect() es recomendada en servidores productivos?
+Falso
+
+10. Al momento de usar un componente en Apache Spark ¿cuál es su principal problema?
+Recomputa el componente.
+
+11. ¿Cuáles son los tres dispositivos de hardware donde podemos persistir información?
+CPU, memoria y disco.
+
+12. Cuando se implementan técnicas de particionado y replicación, ¿es correcto afirmar que podemos trabajar desde DataFrames directamente?
+Falso
+
+13. ¿Cuál es la cantidad mínima recomendada de réplicas?
+3
+
+14. ¿Cuáles son las dos sentencias usadas para conservar datos en memoria y/o disco?
+cache() y persist()
+
+15. ¿El error en el siguiente código a qué es debido?
+rdd = spark.textFile("archivoEjemplo.csv").map(lambda l: l.split(",")) 
+rdd2 = spark.textFile("archivoEjemplo2.csv").map(lambda l: l.split(",")) 
+
+rdd = rdd.map(lambda l : [l[0],l[1]]) 
+rdd2 = rdd2.map(lamba l : [l[1],l[0]]) 
+
+rdd = rdd2.union(rdd) diccionario = {'a': 1, 'b': 2, 'c':3} 
+
+rdd.map(lambda l : [ l[0], diccionario[l[1]] ] )
+
+Error conceptual, columnas erróneamente seleccionadas.
+
+16. ¿Cuál es el contexto para usar SparkSQL?
+SQLContext()
+
+17. ¿Cuáles son las funciones para inferir la estructura de un DataFrame?
+StructType() y StructField()
+
+18. ¿Cuál es el método recomendado para asignar encabezado a un DataFrame?, tratándolo desde su forma RDD.
+Header
+Columns
+*respuestas malas
+Row
+
+19. El uso de UDF limita al usuario obligándolo a usar solo los elementos que ofrece Apache Spark. La afirmación anterior es:
+Falsa
+
+20. ¿Cuál es el método para registrar un DF como tabla SQL?
+registerTempTable()
