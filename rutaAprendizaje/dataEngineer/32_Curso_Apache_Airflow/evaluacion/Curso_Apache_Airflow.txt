@@ -1,0 +1,85 @@
+Curso de Fundamentos de Apache Airflow
+
+1. ¿Cuál de estás son caraterísticas de Apache Airflow?
+Todas las respuestas son correctas
+
+2. Un DAG tiene las siguiente propiedadades, es un grafo cíclico y dirigido. ¿Es correcto?
+FALSE
+
+3. Un DAG está compuesto por tareas.
+TRUE
+
+4. Un operador nos permite:
+Definir qué van a hacer nuestras tareas
+
+5. La variable de configuración AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL nos permite:
+Definir la frecuencia (en segundos) con la que se escanea el directorio DAGs en busca de nuevos archivos. Por defecto, 5 minutos.
+
+6. Una de las maneras en la que podemos crear variables y conexiones en Apache Airflow es utilizando la interfaz gráfica, pero hay otras alternativas
+TRUE
+
+7. ¿Cuál de estás es una sintaxis para declarar un DAG?
+Todas las opciones son válidas
+
+8. ¿El parámetro task_id es obligatorio para utilizar un bash operator?
+TRUE
+
+9. ¿Para qué sirve el parámetro python_callable de un PythonOperator?
+Para pasar la función que nos interesa ejecutar
+
+10. ¿Cómo podemos definir dependencias entre tareas? Utilizando:
+>>, <<, set_downstream(), set_upstream()
+
+11. Para crear un custom operator nuestra clase tiene que heredar de la clase:
+BaseOperator
+
+12. ¿Qué significa definir un schedule_interval @hourly?
+Nuestro DAG se va a ejecutar cada hora
+
+13. ¿Qué significa ejecutar un proceso usando la siguiente sintaxis? 0 7 * * 1
+Cada lunes a las 7 AM nuestro proceso se va a ejecutar
+
+14. Las tareas en Apache Airflow sólo tienen 3 posibles estados, RUNNING, FAILED y SUCCESS
+FALSE
+
+15. El task action CLEAR nos permite limpiar el estado actual de una tarea
+TRUE
+
+16. El trigger rule ALL_DONE nos permite:
+Ejecutar una tarea cuando las tareas anteriores hayan finalizado sin importar el estado final
+
+17. Los sensores son un tipo de operador
+TRUE
+
+18. Los ExternalTaskSensor nos permiten:
+Esperar por el estado de una tarea que se encuentra en otro DAG
+
+19. Un file sensor nos permite esperar por la creación de un fichero específico
+TRUE
+
+20. Si utilizamos la variable {{ ds }} podemos utilizar:
+El logical date de nuestro DAG
+
+21. Los XComs nos permiten que las tareas se comuniquen entre sí
+TRUE
+
+22. Un BranchPythonOperator nos permite:
+Establecer una condición para que cuando se cumpla dicha condición se ejecute una parte de nuestro flujo u otra
+
+23. ¿Dónde tenemos que guardar nuestros DAGs para que el scheduler sea capaz de leerlos?
+En la carpeta /dags
+
+24. Cuando una tarea está de color gris significa que:
+La tarea está en queued
+
+25. Cuando una tare está de color verde lima significa que:
+La tarea está en running
+
+26. Las tareas por defecto tienen el parámetro depend_on_past en:
+TRUE
+
+27. El parámetro max_active_runs sirve para:
+Definir un máximo de instancias concurrentes de nuestro DAG se pueden ejecutar
+
+28. Airflow se puede utilizar para:
+Todas las opciones son válidas
