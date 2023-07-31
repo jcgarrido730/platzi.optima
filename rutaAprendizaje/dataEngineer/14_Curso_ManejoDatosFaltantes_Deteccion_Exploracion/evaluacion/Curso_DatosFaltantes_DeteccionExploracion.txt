@@ -1,0 +1,109 @@
+Curso de Manejo de Datos Faltantes: Detección y Exploración
+
+1. ¿Por qué deberías explorar y lidiar con los valores faltantes?
+Al encontrar valores faltantes en los datos, es necesario explorarlos y entenderlos para evitar producir sesgos en los resultados e incluso evitar problemas en la creación de modelos.
+
+2. Responde si la siguiente sentencia es verdadera o falsa:
+A pesar de que la mejor manera de tratar a los datos que faltan es no tenerlos, esto es pasa con una frecuencia baja. Por lo tanto, deberemos aprender cómo tratarlos apropiadamente.
+Verdadera
+
+3.Recolectar datos es una tarea del día a día de una científica de datos. Puedes combinar el poder de interactividad de los jupyter notebooks junto con la versatilidad del uso de la línea de comandos para conseguir hacer este proceso automático en un ambiente familiar. ¿Esto es verdadero o falso?
+Verdadero
+
+4. Pandas es una librería increíble para el manejo de datos tabulares, no obstante, sus métodos y estructuras pueden no satisfacer tus necesidades completamente. Para ello, Pandas ofrece opciones para extenderlo y ajustarlo a tus requerimientos. ¿Cuál de los siguientes decoradores puede ayudarte a registrar un acceso a funciones y propiedades de un DataFrame?
+pandas.api.extensions.register_dataframe_accessor()
+
+5. Tabular es una forma práctica de expresar valores, magnitudes u otros datos por medio de tablas, pero antes de llegar a una tabla, siempre es bueno comenzar con ___.
+Resúmenes simples, como números.
+
+6. Tabular la ausencia de valores faltantes por filas / casos o columnas / variables es fundamental. Sin embargo, una tabla no siempre es la mejor opción para encontrar ideas sobre el por qué de de nuestros valores faltantes. ¿Cuál de las siguientes nombres de visualización podría ayudarte a cuantificar la coocurrencia de valores faltantes entre tus variables?
+UpSet Plot
+
+7. ¿Por qué deberías visualizar tus valores faltantes?
+Todas las respuestas son correctas.
+
+8. La siguiente sentencia es verdadera o falsa:
+Los valores faltantes siempre son representados como NA.
+Falsa
+
+9. ¿Cuál de los siguientes valores no puede ser una representación de un valor faltante?
+Todos podrían ser representación de valores faltantes. La representación de los valores faltantes siempre dependerá del contexto de trabajo.
+
+10. ¿Qué puedes concluir de la siguiente afirmación? Asumir que los valores faltantes siempre vendrán en un único formato es un error, pero asumir que siempre seremos capaces de detectar la ausencia de valores es un error aún mayor.
+Los valores faltantes pueden tomar distintas formas dentro de un conjunto de datos, pero también pueden no estar incluidas de forma directa dentro del espacio observable.
+
+11. ¿En qué consiste el completar observaciones al exponer combinaciones de n-tuplas o n-variables?
+Convierte los valores faltantes implícitos en explicítos a través de completar los datos con combinaciones faltantes de valores provenientes de n-varibles.
+
+12. `pyjanitor` es una implementación del paquete de R `janitor`, y provee una API para limpieza de datos en Python. ¿Cuál de las siguientes funciones podríamos utilizar para exponer los valores faltantes implícitos?
+janitor.complete()
+
+13. ¿Cuál de los siguientes elementos es un mecanismo de acción de los valores faltantes?
+Todos son un mecanismo de acción de los valores faltantes.
+
+14. Llegas a tu trabajo y observas que algunas personas faltan, pero realmente sabes que la ausencia de estas personas no está ligada entre sí. ¿Qué tipo de mecanismo de valores faltantes podría estar actuando?
+Missing Completely At Random (MCAR).
+
+15. Llegas a tu trabajo y observas que todos los amigos de Lynn se encuentran ausentes, sin excepción. ¿Qué tipo de mecanismo de valores faltantes podría estar actuando?
+Missing Not At Random (MNAR).
+
+16. ¿Cuál no es una característica de la matriz de sombras?
+Valores implícitos.
+
+17. Una vez que se concatena la matriz de sombras a tu conjunto de datos original, ¿qué se puede realizar con ella?
+Ambas opciones son posibles.
+
+18. La variable X_2_NA te indica si existen o no valores para la variable X_2.
+Sospechas que la variable X, podría estar relacionada con la presencia de valores faltantes. ¿Cuál de las siguientes acciones no podría realizarse de primera mano para ganar ideas sobre esta relación?
+Realizar un gráfico de scatter plot de X_1 y X_2 coloreado por la variable X_2_NA.
+
+19. Una gráfica de puntos es muy útil para visualizar relaciones entre variables. No obstante, si al menos una de las dos variables tiene valores faltantes, estos puntos no serán dibujados. ¿Cómo podrías solventar este problema para continuar explorando sin agregar ruido a tus datos reales?
+Agregar valores dummy a los valores faltantes para visualizarlos en los marginales de la gráfica de puntos y observar su distribución en cada eje.
+
+20. ¿Qué significa cuantificar la correlación de nulidad?
+La correlación de nulidad cuantifica qué tan fuerte la presencia o ausencia de una variable afecta la presencia o ausencia de otra.
+
+21. ¿Qué significa que una variable tenga una correlación de nulidad de -1, 0 o 1 con otra variable?
+Si la correlación es -1, si una variable aparece la otra seguramente no. Si la correlación es 0, la presencia u ausencia de una variable no afecta la de otra. La correlación de 1 indica que si una variable aparece la otra también lo hará.
+
+22. ¿Qué alternativas existen para tratar valores faltantes?
+Eliminación e Imputación de valores faltantes o realizar una nueva colecta de datos.
+
+23. ¿Qué significa la eliminación de valores faltantes por el método pairwise?
+En la eliminación listwise, la eliminación ocurre cuando un procedimiento usa casos que contienen valores faltantes. El procedimiento no incluye una variable particular cuando existe un valor falte, pero puede utilizar otras variable sin valores faltantes.
+
+24. ¿Qué significa la eliminación de valores faltantes por el método listwise?
+En la eliminación listwise, un caso se descarta de un análisis porque le falta un valor en al menos una de las variables especificadas. Por lo tanto, el análisis solo se ejecuta en casos que tienen un conjunto completo de datos.
+
+25. ¿Qué es la imputación de valores faltantes?
+Estimar los valores ausentes con base a los valores de otras variables o modelos predictivos.
+
+-----------------------------------------------------------------------------------------------------
+2. Responde si la siguiente sentencia es verdadera o false. Ignorar a los valores faltantes no puede producir sesgos en tus análisis.
+Falso
+
+3. A lo largo de tu carrera como científica de datos utilizarás distintas herramientas de software. ¿Qué es algo que siempre debes aprender para cada herramienta al tratar valores faltantes?
+Sus operaciones y representaciones de los valores faltantes.
+
+5. ¿En qué caso podrías hacer uso de extender la API de Pandas?
+Todas las respuestas son correctas.
+
+9. ¿Qué significa que puedan existir valores faltantes implícitos?
+Un valor faltante implícito indica que el valor faltante debería estar incluido en el conjunto de datos, sin que éste lo diga o lo especifique de forma directa.
+
+14. Llegas a tu trabajo, observas que algunas personas faltaron por enfermedad y te das cuenta que esas personas se sentaban relativamente cerca . ¿Qué tipo de mecanismo de valores faltantes podría estar actuando?
+Missing At Random (MAR).
+
+21. ¿Qué busca mostrar el gráfico de dendograma de nulidad?
+Agrupar columnas que tiene una alta correlación de nulidad.
+
+25. ¿Cuál podría ser una desventaja de la imputación de un único valor como la media, mediana o moda?
+Puede sesgar los resultados y perder la correlación entre variables.
+
+3. Dada la siguiente operación en un contexto agnóstico de lenguaje `2 + NA`, ¿qué resultado puedes esperar?
+Todas las respuestas son correctas.
+
+6. Al trabajar con datos temporales, la pregunta "¿Cuál es mi racha de valores completos y faltantes en una variable?" Puede ser importante por que ___.
+Permite encontrar fechas / períodos en los cuales esté acumulando valores faltantes. Lo que permite continuar investigando en esos períodos y entender el por qué de la ausencia de valores.
+
+
