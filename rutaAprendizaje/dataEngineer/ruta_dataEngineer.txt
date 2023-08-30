@@ -1,0 +1,98 @@
+
+1.Para delimitar el número de ocurrencias de alguna expresión (una, dos o tres, en este caso), el número de repeticiones buscadas se denota por:
+{1,3}
+
+2. El patrón /\[\d+?\],.*/ ¿con cuál opción hará match?:
+[12],34,56,78
+
+3. El CIO de la empresa te ha pedido que migres la base de datos actual PosgreSQL a la nube de AWS, sin embargo, te ha hecho énfasis en que quiere una base de datos de alto desempeño, altamente disponible y de ser posible serverless ¿cuál base de datos recomendarías utilizar?
+Aurora.
+
+4. ¿Cuáles son los operadores relacionales que se utilizan en la programación bash?
+< == !=
+
+5. ¿En el caso de envíe un número de 20 argumentos a mi programa bash y necesita recuperar el número 14, cuál de las siguientes sentencias utilizaría?
+${14}
+
+6. ¿Con cuál de los siguientes comandos se puede escribir en un archivo llamado prueba.txt sin utilizar un programa externo?
+echo texto >> prueba.txt
+
+7. ¿Cuál de los siguientes comandos es correcto para copiar todos los archivos de un directorio a otro estando en otro directorio?
+cp -R directorio1/ directorio2/
+
+8. Se crean dos archivos cuando creas una llave pública y privada para SSH, ¿cuál es la extensión de la llave privada?
+Ninguna extensión
+
+9. ¿PostgreSQL tiene un lenguaje que es superset del estándar SQL?
+Verdadero
+
+10. Al aplicar un estilo de distribución en Redshift de busca:
+Los datos deben estar distribuidos equitativamente y con las columnas "join" en los mismos slices para incrementar la velocidad de respuesta.
+
+11. Una de las desventajas del ordenamiento intercalado (Interleaved) es:
+La carga de datos es más lenta.
+
+12. ¿Cuál es es el método recomendado para saber si tenemos valores duplicados?
+countApproxDistinct()
+
+13. ¿Cuál de las siguientes afirmaciones es verdadera?
+La primera instrucción de un Dockerfile siempre es FROM.
+
+14. ¿Cuál es el efecto de usar el comando docker-compose build?
+Construye imágenes solo para aquellos servicios que especifican el atributo build.
+
+15. ¿Cuál de estos es un operador unario?
+Proyección
+
+16. Desventaja de aplicar sharding.
+Baja elasticidad
+
+17. Con este comando de Seaborn se pueden crear distintos tipos de datos orientados a gráficos de relación:
+sns.relplot
+
+18. ¿Con cuál comando de Seaborn se pueden ver múltiples relaciones en todo un dataset?
+sns.pairplot
+
+19. ¿Cuál de los siguientes conceptos no pertenece a una categoría de asimetría estadística?
+Media
+
+20. Realizaste una gráfica de puntos y observas que los puntos forman patrones de bandas, ¿cuál de las siguientes opciones podría ser una alternativa de visualización?
+Todas las anteriores
+
+21. La regresión simple únicamente puede manejar relaciones lineales.
+Verdadero
+
+22. El parámetro max_active_runs sirve para:
+Definir un máximo de DAGs que se pueden ejecutar simultáneamente
+*respuesta mala
+
+23. Airflow se puede utilizar para:
+Todas las opciones son válidas
+
+24. ¿Qué se obtiene al ejecutar primos[3] si tenemos la siguiente lista de Python?
+primos = [2, 3, 5, 7, 11, 13, 17, 19]
+7
+
+25. Necesitas cuantificar la distancia únicamente entre variables categóricas ordinales (tipo factor). ¿Cúal de las siguientes métricas de distancia podría ser más útil?
+Manhattan
+
+26. ¿Cuál de los siguientes comandos nos muestra todas las colecciones de una base de datos en MongoDB?
+show collections
+
+27. ¿Cuáles son las tres habilidades fundamentales de la ciencia de datos?
+Programación, estadística y matemáticas y conocimiento temático (dominio del negocio)
+
+28. ¿Cuál es la librería en Python para gestionar el uso de AWS?
+boto3
+
+29. ¿Qué es business intelligence?
+Tomar información del pasado y del presente, limpiarla, transformarla y analizarla para tomar decisiones basadas en datos.
+
+30. ¿Cuál es la principal diferencia entre un Data Warehouse y un Data Mart?
+Un Data Warehouse es una base de datos centralizada que almacena datos de toda la organización, mientras que un Data Mart almacena solo un subconjunto específico de datos relevantes para un área de negocio en particular.
+
+
+Si tu plan aplica, recibirás el diploma próximamente en tu casa. 
+Ten en cuenta que puede tardar de 1 a 3 meses dependiendo de tu país. 
+Si tienes algún problema envíanos un email a cursos@platzi.com o carolina@platzi.com.
+
